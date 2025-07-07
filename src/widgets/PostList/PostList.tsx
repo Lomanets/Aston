@@ -1,18 +1,15 @@
 import React from 'react';
-import styles from './postList.module.css';
-import PostCard from '../../entities/post/ui/PostCard';
+import styles from './PostList.module.css';
 
 
 interface PostListProps {
-    data: string[];
+    children: React.ReactNode;
 }
 
-const PostList: React.FC<PostListProps> = ({data}) => {
+const PostList: React.FC<PostListProps> = ({children}) => {
     return ( 
         <ul className={styles.list}>
-           <PostCard title={data[0]}/>
-           <PostCard title={data[1]}/>
-           <PostCard title={data[2]}/>
+           {children}
         </ul>
     );
 }
