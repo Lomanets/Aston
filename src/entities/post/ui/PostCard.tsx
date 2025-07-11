@@ -8,6 +8,7 @@ interface PostCardProps {
     image?: string; 
     altImage?: string;
     desc?: string;
+    key: string;
 }
 
 const PostCard: React.FC<PostCardProps> = ({title}) => {
