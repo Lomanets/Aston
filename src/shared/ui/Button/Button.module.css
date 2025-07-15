@@ -1,0 +1,16 @@
+.button {
+    width: fit-content;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #000;
+    background: #93f224;
+    border: none;
+    font-size: 18px;
+    transition: 0.2s ease;
+    border-radius: 10px;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
