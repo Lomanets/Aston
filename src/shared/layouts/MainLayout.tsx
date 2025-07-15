@@ -1,14 +1,12 @@
 import React from 'react';
 import styles from './MainLayout.module.css';
-import PostList from '../../widgets/PostList/PostList';
-import PostCard from '../../entities/post/ui/PostCard';
-import Header from '../../widgets/LayoutHeader/Header';
-import Footer from '../../widgets/LayoutFooter/Footer';
-import LogoAston from '../../assets/logo__aston.svg';
-import LogoAstonWhite from '../../assets/logo__aston__white.svg';
-import { useTheme } from '../../shared/lib/theme/ThemeProvider';
-import { ThemeSwitcher } from '../../features/ThemeSwitcher/ui/ThemeSwitcher';
+import PostCard from '@entities/post/ui/PostCard';
+import { Header, Footer, PostList } from '../../widgets';
+import LogoAston from '@assets/logo__aston.svg';
+import LogoAstonWhite from '@assets/logo__aston__white.svg';
+import { useTheme } from '@shared/lib/theme/ThemeProvider';
 import { nanoid } from 'nanoid';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher/ui/ThemeSwitcher';
 
 interface Post {
     id: string;
@@ -31,6 +29,8 @@ const logos = {
 
 const MainLayout: React.FC = ({}) => {
     const { theme, toggleTheme } = useTheme();
+
+    
 
     return ( 
         <>

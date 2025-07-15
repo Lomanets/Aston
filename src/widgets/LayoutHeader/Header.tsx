@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import styles from './Header.module.css';
-import Modal from '../../shared/ui/Modal/Modal';
-import Button from '../../shared/ui/Button/Button'
+import { Modal, Button } from '@shared/ui';
+
 
 interface HeaderProps {
     title?: string;
@@ -15,6 +14,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({title, logo, altLogo, extraContent}) => {
     const [modalWindow, setModalWindow] = useState(false)
 
+    const handleCloseModal = () => setModalWindow(false);
+    const handleToggleModal = () => setModalWindow(!modalWindow);
 
     return ( 
         <header className={styles.header}>
@@ -26,16 +27,10 @@ const Header: React.FC<HeaderProps> = ({title, logo, altLogo, extraContent}) => 
             </a>
             <h1 className={styles.header__title}>{title}</h1>
             {extraContent}
-            {modalWindow && createPortal (
-                <Modal 
-                    textModal={'Проект создан для интенсива по Front-end в компанию Aston'} 
-                    onClickModal={() => { setModalWindow(false) }} 
-                />,
-                document.body
-            )}
+            {modalWindow && <Modal onClick={handleCloseModal} />}
             <Button 
                 textButton={'О проекте'} 
-                onClickModal={() => { setModalWindow(!modalWindow) }} 
+                onClick={handleToggleModal} 
             />
         </header>
     );

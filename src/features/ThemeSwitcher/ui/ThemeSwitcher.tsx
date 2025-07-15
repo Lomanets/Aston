@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from '../../../shared/lib/theme/ThemeProvider';
+import { useTheme } from '@shared/lib/theme/ThemeProvider';
 import styles from './ThemeSwitcher.module.css';
 
 export const ThemeSwitcher: React.FC = () => {

@@ -1,17 +1,20 @@
+import { createPortal } from 'react-dom';
 import styles from './Modal.module.css'
 
 interface ModalProps{
-    textModal: string;
-    onClickModal: React.MouseEventHandler<HTMLButtonElement>;
+    onClick: (React.MouseEventHandler<HTMLButtonElement>);
 }
 
-const Modal: React.FC<ModalProps> = ( {textModal, onClickModal} ) => {
+const Modal: React.FC<ModalProps> = ( {onClick} ) => {
     return (
+    <>
+        {createPortal (
         <div className={styles.modal}>
-            <h2 className={styles.modal__title}>{textModal}</h2>
-            <button className={styles.modal__button} onClick={onClickModal}>x</button>
-        </div>
-    );
-}
+            <h2 className={styles.modal__title}>Проект создан для интенсива по Front-end в компанию Aston</h2>
+            <button className={styles.modal__button} onClick={onClick}>x</button>
+        </div>,
+        document.body)}
+    </>
+)}
 
 export default Modal;
