@@ -4,7 +4,7 @@
     box-sizing: border-box;
     cursor: pointer;
     color: #000;
-    background: #93f224;
+    background: var(--color-accent);
     border: none;
     font-size: 18px;
     transition: 0.2s ease;

@@ -5,16 +5,18 @@ import styles from './PostCard.module.css';
 
 interface PostCardProps {
     title?: string;
-    image?: string; 
+    image?: string;
     altImage?: string;
-    desc?: string;
-    key: string;
+    postText?: string;
+    children?: React.ReactNode;
 }
 
-const PostCard: React.FC<PostCardProps> = ({title}) => {
-    return ( 
+const PostCard: React.FC<PostCardProps> = ({ title, postText, children}) => {
+    return (
         <li className={styles.item}>
             <h2>{title}</h2>
+            <p className={styles.item__decs}>{postText}</p>
+            {children}
         </li>
     );
 }

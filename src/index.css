@@ -1,6 +1,8 @@
 :root {
   
   --font-family: 'Arial', sans-serif;
+  --color-accent: #93f224;
+  --font-text: 15px;
   
   
   [data-theme="light"] {
@@ -22,6 +24,25 @@ body {
   color: var(--text-color);
   font-family: var(--font-family);
   transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 .root {
