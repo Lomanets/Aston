@@ -1,0 +1,25 @@
+.filter {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.filter__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.filter__input {
+    min-width: fit-content;
+    border-color: var(--color-accent);
+    padding: 5px;
+    box-sizing: border-box;
+    border-style: none;
+    border-bottom-style: solid;
+    outline: none;
+}
+
+.filter__label {
+    font-size: calc(var(--font-text) / 1.2);
+}
