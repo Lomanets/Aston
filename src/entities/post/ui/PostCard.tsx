@@ -4,18 +4,18 @@ import styles from './PostCard.module.css';
 
 
 interface PostCardProps {
-    title?: string;
-    image?: string;
-    altImage?: string;
-    postText?: string;
+    firstName?: string;
+    lastName?: string;
+    userImage?: string;
     children?: React.ReactNode;
 }
 
-const PostCard: React.FC<PostCardProps> = ({ title, postText, children}) => {
+const PostCard: React.FC<PostCardProps> = ({ firstName, lastName, children}) => {
     return (
         <li className={styles.item}>
-            <h2>{title}</h2>
-            <p className={styles.item__decs}>{postText}</p>
+            <p className={styles.item__text}></p>
+            <h2>{firstName} {lastName}</h2>
+            
             {children}
         </li>
     );

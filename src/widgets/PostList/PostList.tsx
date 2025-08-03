@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import styles from './PostList.module.css';
 import withLoading from '@shared/lib/hoc/WithLoading';
+import { UserProfilePage } from '@/pages';
 
 interface PostListProps {
     children: React.ReactNode;
